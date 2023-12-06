@@ -18,6 +18,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/workers', function () {
-    return 'This is worker from routes';
-});
+Route::get('/workers', [\App\Http\Controllers\WorkerController::class, 'index']);
+Route::get('/workers/show', [\App\Http\Controllers\WorkerController::class, 'show']);
